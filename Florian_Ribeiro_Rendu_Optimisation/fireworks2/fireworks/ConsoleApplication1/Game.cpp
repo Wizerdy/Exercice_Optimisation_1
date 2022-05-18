@@ -73,10 +73,8 @@ void Game::Update(int deltaTime) {
 		for (GenerateurParticule* generateur : _generateurs) {
 			generateur->Update(deltaTime);
 			if (generateur->EstActif() == false) {
-				//printf("Kill gen\n");
 				_generatorPool.push(generateur);
 				_generateurs.erase(std::find(_generateurs.begin(), _generateurs.end(), generateur));
-				//delete generateur;
 			}
 		}
 	}

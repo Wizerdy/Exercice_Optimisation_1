@@ -10,7 +10,6 @@
 class GenerateurParticule {
 private:
 	std::vector<Particule*> _liste;
-	//Pool<Particule> _particlePool;
 	std::queue<Particule*> _particlePool;
 	int _currentLength;
 	int _nbParticulesMax;

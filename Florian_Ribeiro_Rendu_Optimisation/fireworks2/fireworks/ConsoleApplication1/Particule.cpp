@@ -3,29 +3,18 @@
 #include <SDL_image.h>
 
 std::unique_ptr<std::map<std::string, Sprite*>> Particule::_spritesLibrary = std::make_unique<std::map<std::string, Sprite*>>(std::map<std::string, Sprite*>());
-//int Particule::totCount = 0;
 
 Particule::Particule(SDL_Renderer* renderer, std::string _modele, std::string _couleur, int vie, const Vector& position, const Vector& force, int taille) {
-	//index = ++totCount;
-	//printf(("new particle : " + std::to_string(totCount) + "\n").c_str());
-	//printf(std::to_string(totCount).c_str());
-	printf("Part new\n");
 	_position = new Vector();
 	_force = new Vector();
 	Init(renderer, _modele, _couleur, vie, position, force, taille);
 }
 
 Particule::~Particule() {
-	printf("Part delete\n");
-	//--totCount;
-	//printf(("RIP : " + std::to_string(totCount) + "\n").c_str());
-	//delete sprite;
+
 }
 
 Particule* Particule::Init(SDL_Renderer* renderer, std::string _modele, std::string _couleur, int vie, const Vector& _position, const Vector& _force, int taille) {
-	//printf("Part init\n");
-	//printf(("Init : " + std::to_string(index) + "\n").c_str());
-
 	(*this->_position) = _position;
 	(*this->_force) = _force;
 	this->vie = vie * 1000;
@@ -57,7 +46,6 @@ Particule* Particule::Init(SDL_Renderer* renderer, std::string _modele, std::str
 
 void Particule::Update(int deltaTime) {
 	vieActuelle = vieActuelle + deltaTime;
-	//Vector* newPosition = new Vector();
 	float x = _position->x;
 	float y = _position->y;
 	x = x + _force->x * deltaTime / 1000;
@@ -70,8 +58,6 @@ void Particule::Update(int deltaTime) {
 		_force->y = 0 - _force->y * 0.8;
 	}
 	_position->Set(x, y);
-	//_position->x = newPosition->x;
-	//_position->y = newPosition->y;
 }
 
 void Particule::Render(SDL_Renderer* screenRenderer) {

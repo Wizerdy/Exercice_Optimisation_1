@@ -8,10 +8,7 @@ class Particule
 {
 private:
 	static std::unique_ptr<std::map<std::string, Sprite*>> _spritesLibrary;
-	/*static int totCount;
-	int index;*/
 
-public:
 	Vector* _position;
 	Vector* _force;
 
@@ -22,6 +19,8 @@ public:
 	int vieActuelle;
 
 	const float GRAVITE = 980;
+
+public:
 
 	Particule(SDL_Renderer* renderer, std::string _modele, std::string _couleur, int vie, const Vector& position, const Vector& _force, int taille);
 	~Particule();

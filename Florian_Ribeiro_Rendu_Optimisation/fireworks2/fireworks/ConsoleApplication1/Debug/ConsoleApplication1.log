@@ -1,5 +1,18 @@
-﻿  Game.cpp
-E:\Partage\fireworks2\fireworks\ConsoleApplication1\Game.cpp(22,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-E:\Partage\fireworks2\fireworks\ConsoleApplication1\Game.cpp(122,25): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-E:\Partage\fireworks2\fireworks\ConsoleApplication1\Game.cpp(122,19): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  ConsoleApplication1.vcxproj -> E:\Partage\fireworks2\fireworks\Debug\fireworks.exe
+﻿  ConsoleApplication1.cpp
+  Font.cpp
+  Game.cpp
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\Game.cpp(22,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\Game.cpp(120,25): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\Game.cpp(120,19): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  GenerateurParticule.cpp
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\GenerateurParticule.cpp(81,49): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\GenerateurParticule.cpp(81,28): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  Particule.cpp
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\Particule.cpp(58,17): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\Particule.cpp(67,56): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\ConsoleApplication1\Particule.cpp(67,42): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+  Pool.cpp
+  Sprite.cpp
+  Vector.cpp
+  Génération de code en cours...
+  ConsoleApplication1.vcxproj -> E:\Cpp\Exercice_Optimisation_1\Florian_Ribeiro_Rendu_Optimisation\fireworks2\fireworks\Debug\fireworks.exe

@@ -1,7 +1,6 @@
 #include "GenerateurParticule.h"
 
 GenerateurParticule::GenerateurParticule() {
-	//printf("Gen new\n");
 	_particlePool = std::queue<Particule*>();
 	_tempVector = new Vector();
 	_position = new Vector();
@@ -9,7 +8,6 @@ GenerateurParticule::GenerateurParticule() {
 }
 
 GenerateurParticule::~GenerateurParticule() {
-	//printf("Gen goodbye\n");
 	for (Particule* particle : _liste) {
 		if (particle != nullptr) {
 			delete particle;
@@ -48,9 +46,6 @@ void GenerateurParticule::Init(SDL_Renderer* screenRenderer, int nbParticulesDeb
 	}
 
 	_liste = std::vector<Particule*>(_nbParticulesMax);
-	/*for (int i = 0; i < _nbParticulesMax; i++) {
-		_liste[i] = nullptr;
-	}*/
 
 	for (int i = nbParticulesDebut; i < _nbParticulesMax; ++i) {
 		_liste[i] = nullptr;
@@ -70,7 +65,6 @@ bool GenerateurParticule::EstActif() {
 }
 
 void GenerateurParticule::AjouterParticule() {
-	//for (int i = 0; i < _nbParticulesMax; i++) {
 	int nbPart = GetNbParticulesActives();
 	if (nbPart < _nbParticulesMax) {
 		int angle = 0;
@@ -95,11 +89,9 @@ void GenerateurParticule::AjouterParticule() {
 
 		++_currentLength;
 	}
-	//}
 }
 
 void GenerateurParticule::Update(int deltaTime) {
-	//printf((State() + "\n").c_str());
 	Particule* particule;
 	int nbParticleActive = GetNbParticulesActives();
 	for (int i = 0; i < _nbParticulesMax; i++) {
@@ -125,13 +117,6 @@ void GenerateurParticule::Update(int deltaTime) {
 
 int GenerateurParticule::GetNbParticulesActives() {
 	return _currentLength;
-	/*int nb = 0;
-	for (int i = 0; i < _nbParticulesMax; i++) {
-		if (_liste[i] != nullptr) {
-			++nb;
-		}
-	}
-	return nb;*/
 }
 
 void GenerateurParticule::Render(SDL_Renderer* screenRenderer) {
